@@ -16,7 +16,7 @@ export default function Navbar() {
     viewport={{ once: false, amount: 0.3 }}
   >
       <div className={`${neonderthaw.className} text-3xl font-bold`}>LonganZ</div>
-      <div className="flex gap-5 font-bold">
+      <div className="gap-5 font-bold hidden md:flex">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
