@@ -19,8 +19,8 @@ export default function AboutMe() {
                 transition={{duration: 0.5, delay: 0.3, type: "spring", stiffness: 200, damping: 10, staggerChildren: 0.2}}
                 viewport={{ once: false, amount: 0.3 }}
                 >
-                    <p>👋 Hi, I'm Longan Zhang, a full-stack developer with 4 years of experience, currently based in  🇨🇳 Yunnan, China.</p>
-                    <p>💻 I specialize in building modern frontend apps with React, Next.js, TypeScript, and Tailwind CSS, and robust backends using Java, Spring Boot, and Spring Cloud. I'm also experienced with MySQL and Redis.</p>
+                    <p>👋 Hi, I&apos;m Longan Zhang, a full-stack developer with 4 years of experience, currently based in  🇨🇳 Yunnan, China.</p>
+                    <p>💻 I specialize in building modern frontend apps with React, Next.js, TypeScript, and Tailwind CSS, and robust backends using Java, Spring Boot, and Spring Cloud. I&apos;m also experienced with MySQL and Redis.</p>
                     <p>🚀 I love turning ideas into real products, focusing on performance, scalability, and clean architecture. Always learning, always building.</p>
                 </motion.span>
                 <motion.div className="p-3 hidden sm:block"

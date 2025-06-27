@@ -1,6 +1,6 @@
 import { Reactjs, Nextjs, Tailwindcss, Nodejs, 
     Redis, Mysql, Java, Springboot, JavaScript, TypeScript, Nestjs } from "@/components/profile/skills-icon";
-    import React, { useEffect, useState } from 'react';
+    import React from 'react';
     import { motion, Variants } from "motion/react";
 
 
