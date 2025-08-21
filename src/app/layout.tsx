@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={rubik.className}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={rubik.className} suppressHydrationWarning>
         {children}
       </body>
     </html>
