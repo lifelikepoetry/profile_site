@@ -47,6 +47,7 @@ const contactInfo = [
   
   {
     icon: WeChat,
+    title: "WeChat",
     href: "_LonganZ",
   },
 ]
