@@ -19,17 +19,15 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <div className="w-full">
 
-                <div className={`flex flex-col items-center`}>
-                    <General />
+            <div className={`flex flex-col items-center`}>
+                <General />
 
-                    <AboutMe />
+                <AboutMe />
 
-                    <SkillsList />
+                <SkillsList />
 
-                    <Project />
-                </div>
+                <Project />
             </div>
         </>
     );
