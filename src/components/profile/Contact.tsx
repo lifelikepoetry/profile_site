@@ -2,7 +2,6 @@
 
 import { motion, Variants } from "motion/react";
 import { Gmail, Twitter, Github, WeChat } from "@/components/profile/contact-icon";
-import { addToast } from "@heroui/toast";
 
 const container = {
   hidden: {},
@@ -57,19 +56,9 @@ export default function Contact() {
     if (item.title === "Gmail") {
       // 邮箱复制到剪贴板
       navigator.clipboard.writeText(item.href);
-      addToast({
-        title: "Email copied to clipboard",
-        description: "You can now paste it into your email client",
-        color: "success",
-      });
     } else if (item.title === "WeChat") {
       // 微信复制到剪贴板
       navigator.clipboard.writeText(item.href);
-      addToast({
-        title: "WeChat ID copied to clipboard",
-        description: "You can now paste it into your WeChat",
-        color: "success",
-      });
     } else {
       window.open(item.href, "_blank");
     }

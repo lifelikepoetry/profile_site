@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Rubik } from "next/font/google";
-import { HeroUIProvider } from "@heroui/system";
-import { ToastProvider } from "@heroui/toast";
 
 export const metadata: Metadata = {
   title: "Profile",
@@ -22,10 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={rubik.className} suppressHydrationWarning>
-        <HeroUIProvider>
-        <ToastProvider />
           {children}
-        </HeroUIProvider>
       </body>
     </html>
   );

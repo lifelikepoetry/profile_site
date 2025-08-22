@@ -13,7 +13,7 @@ export default function AboutMe() {
         >
             <div className="m-auto flex flex-col gap-4 items-center py-15">
                 <p className="text-2xl font-bold text-center">About me</p>
-                <div className="flex gap-4 items-center justify-between">
+                <div className="flex gap-4 items-center justify-between max-w-5xl">
                     <motion.span className="text-gray-600 text-lg flex flex-col gap-7 w-full sm:w-3/4 text-center"
                         initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
