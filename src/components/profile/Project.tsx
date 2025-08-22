@@ -1,8 +1,4 @@
 "use client"
-import GmailFoot from "@/components/profile/footer-icon/GmailFoot";
-import TwitterFoot from "@/components/profile/footer-icon/TwitterFoot";
-import GithubFoot from "@/components/profile/footer-icon/GithubFoot";
-import WechatFoot from "@/components/profile/footer-icon/WechatFoot";
 import { MorphingDialogBasic } from "./MorphingDialogBasic";
 import { motion, Variants } from "motion/react";
 
@@ -28,7 +24,7 @@ const child: Variants = {
 
 export default function Project() {
     return (
-        <motion.div id="projects" className="h-screen w-full flex flex-col gap-4 items-center py-15 bg-blue-300"
+        <motion.div id="projects" className="h-screen w-full flex flex-col gap-4 items-center py-15"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
@@ -39,22 +35,13 @@ export default function Project() {
             <motion.div variants={child}>
                 <MorphingDialogBasic />
             </motion.div>
-            <motion.div variants={child}>
+            {/* <motion.div variants={child}>
                 <MorphingDialogBasic />
             </motion.div>
             <motion.div variants={child}>
                 <MorphingDialogBasic />
-            </motion.div>
+            </motion.div> */}
         </div>
-        <div className="flex gap-4 items-center justify-between border-t-1 border-gray-300 pt-4 mt-40 pb-20 w-full">
-                    <span className="text-gray-500 text-m">&copy; 2025 Longan Zhang. All rights reserved</span>
-                    <div className="gap-4 text-gray-500 cursor-pointer hidden sm:flex">
-                        <GmailFoot width={24} height={24} />
-                        <TwitterFoot width={24} height={24} />
-                        <GithubFoot width={24} height={24} />
-                        <WechatFoot width={24} height={24} />
-                    </div>
-                </div>
     </motion.div>
     )
 }

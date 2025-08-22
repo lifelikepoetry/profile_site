@@ -5,7 +5,7 @@ export default function AboutMe() {
     return (
         <motion.div
             id="about"
-            className="flex h-screen w-full bg-purple-300"
+            className="flex h-screen w-full"
             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -21,8 +21,9 @@ export default function AboutMe() {
                         viewport={{ once: false, amount: 0.3 }}
                     >
                         <p>👋 Hi, I&apos;m Longan Zhang, a full-stack developer with 4 years of experience, currently based in  🇨🇳 Yunnan, China.</p>
-                        <p>💻 I specialize in building modern frontend apps with React, Next.js, TypeScript, and Tailwind CSS, and robust backends using Java, Spring Boot, and Spring Cloud. I&apos;m also experienced with MySQL and Redis.</p>
+                        <p>💻 I specialize in building modern frontend apps with React, Next.js, TypeScript, and Tailwind CSS, and robust backends using Node.js, Nest.js, Java, Spring Boot, and Spring Cloud. I&apos;m also experienced with Postgres, MySQL and Redis.</p>
                         <p>🚀 I love turning ideas into real products, focusing on performance, scalability, and clean architecture. Always learning, always building.</p>
+                        <p>💬 If you like my projects, feel free to contact me, and let&apos;s learn together.</p>
                     </motion.span>
                     <motion.div className="p-3 hidden sm:block"
                         initial={{ opacity: 0, x: 30, filter: "blur(10px)" }}

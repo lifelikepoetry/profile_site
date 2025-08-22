@@ -19,13 +19,13 @@ const child = {
 
 export default function General() {
 
-    const text = "Hi, I'm Longan Zhang! ";
+    const text = "Hi, I'm Coder Zhang! ";
     const text2 = "A Full Stack Engineer";
     const text3 = "Welcome to my personal page!";
     const text4 = ['Just', 'an', 'indie', 'Full-stack', 'developer', 'who', 'loves', 'to', 'build', 'something.'];
 
     return (
-        <div id="home" className="h-screen w-full flex flex-col items-center justify-center gap-10 bg-pink-300">
+        <div id="home" className="h-screen w-full flex flex-col items-center justify-center gap-10">
                     <motion.div
                         className="text-2xl font-bold flex flex-wrap"
                         variants={container}

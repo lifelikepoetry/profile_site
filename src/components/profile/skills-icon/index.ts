@@ -9,3 +9,4 @@ export { default as Springboot } from "./Springboot";
 export { default as JavaScript } from "./JavaScript";
 export { default as TypeScript } from "./TypeScript";
 export { default as Nestjs } from "./Nestjs";
+export { default as Prisma } from "./Prisma";

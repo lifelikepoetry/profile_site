@@ -1,10 +1,14 @@
 import {
     Reactjs, Nextjs, Tailwindcss, Nodejs,
-    Redis, Mysql, Java, Springboot, JavaScript, TypeScript, Nestjs
+    Redis, Mysql, Java, Springboot, JavaScript, TypeScript, Nestjs, Prisma
 } from "@/components/profile/skills-icon";
 import React from 'react';
 import { motion, Variants } from "motion/react";
-
+import GmailFoot from "@/components/profile/footer-icon/GmailFoot";
+import TwitterFoot from "@/components/profile/footer-icon/TwitterFoot";
+import GithubFoot from "@/components/profile/footer-icon/GithubFoot";
+import WechatFoot from "@/components/profile/footer-icon/WechatFoot";
+import { div } from "motion/react-client";
 
 const skills = [
     { name: "React", icon: Reactjs },
@@ -18,6 +22,7 @@ const skills = [
     { name: "Springboot", icon: Springboot },
     { name: "MySQL", icon: Mysql },
     { name: "Redis", icon: Redis },
+    { name: "Prisma", icon: Prisma },
 ]
 
 const variants = {
@@ -42,7 +47,8 @@ const child: Variants = {
 export default function SkillsList() {
 
     return (
-        <motion.div id="skills" className="h-screen w-full flex bg-teal-300"
+
+        <motion.div id="skills" className="h-screen w-full flex"
             initial="hidden"
             whileInView="visible"
             variants={variants}
@@ -62,6 +68,8 @@ export default function SkillsList() {
                     ))}
                 </motion.div>
             </div>
+
         </motion.div>
+
     )
 }

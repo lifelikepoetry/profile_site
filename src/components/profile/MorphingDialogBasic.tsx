@@ -34,10 +34,10 @@ export function MorphingDialogBasic() {
                 <div className='flex grow flex-row items-end justify-between px-3 py-2'>
                     <div>
                         <MorphingDialogTitle className='text-zinc-950 dark:text-zinc-50'>
-                            PROJECT 1
+                            PEN-PATH
                         </MorphingDialogTitle>
                         <MorphingDialogSubtitle className='text-zinc-700 dark:text-zinc-400'>
-                            PROJECT 1 DESCRIBE
+                            A social platform that allows daily sharing of diary.
                         </MorphingDialogSubtitle>
                     </div>
                     <span
@@ -63,10 +63,10 @@ export function MorphingDialogBasic() {
                     />
                     <div className='p-6'>
                         <MorphingDialogTitle className='text-2xl text-zinc-950 dark:text-zinc-50'>
-                            PROJECT 1
+                            PEN-PATH
                         </MorphingDialogTitle>
                         <MorphingDialogSubtitle className='text-zinc-700 dark:text-zinc-400'>
-                            PROJECT 1 DESCRIBE
+                            A social platform that allows daily sharing of diary.
                         </MorphingDialogSubtitle>
                         <MorphingDialogDescription
                             disableLayoutAnimation
@@ -77,22 +77,18 @@ export function MorphingDialogBasic() {
                             }}
                         >
                             <p className='mt-2 text-zinc-500 dark:text-zinc-500'>
-                                Little is known about the life of Édouard-Wilfrid Buquet. He was
-                                born in France in 1866, but the time and place of his death is
-                                unfortunately a mystery.
+                                一款基于React/Nestjs/Postgres构建的日记分享社交平台
                             </p>
                             <p className='text-zinc-500'>
-                                Research conducted in the 1970s revealed that he’d designed the
-                                “EB 27” double-arm desk lamp in 1925, handcrafting it from
-                                nickel-plated brass, aluminium and varnished wood.
+                                点击下方链接进入体验
                             </p>
                             <a
                                 className='mt-2 inline-flex text-zinc-500 underline'
-                                href='https://www.are.na/block/12759029'
+                                href='http://penpath.coder-zh.top/'
                                 target='_blank'
                                 rel='noopener noreferrer'
                             >
-                                Are.na block
+                                PEN-PATH
                             </a>
                         </MorphingDialogDescription>
                     </div>
