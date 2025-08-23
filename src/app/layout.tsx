@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Rubik } from "next/font/google";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Profile",
@@ -20,7 +21,20 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={rubik.className} suppressHydrationWarning>
-          {children}
+        <Toaster position='top-center'
+          duration={3000}
+          expand
+          offset={32}
+          className='flex justify-center'
+          toastOptions={{
+            style: {
+              width: 'fit-content',
+              padding: '16px 24px',
+              fontWeight: '400',
+              zIndex: 9999,
+            }
+          }} />
+        {children}
       </body>
     </html>
   );

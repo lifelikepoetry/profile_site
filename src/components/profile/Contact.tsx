@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "motion/react";
 import { Gmail, Twitter, Github, WeChat } from "@/components/profile/contact-icon";
+import { toast } from "sonner";
 
 const container = {
   hidden: {},
@@ -56,9 +57,11 @@ export default function Contact() {
     if (item.title === "Gmail") {
       // 邮箱复制到剪贴板
       navigator.clipboard.writeText(item.href);
+      toast.success("gmail has copied to clipboard");
     } else if (item.title === "WeChat") {
       // 微信复制到剪贴板
       navigator.clipboard.writeText(item.href);
+      toast.success("wechat has copied to clipboard");
     } else {
       window.open(item.href, "_blank");
     }

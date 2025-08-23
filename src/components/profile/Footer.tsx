@@ -2,6 +2,7 @@ import GmailFoot from "@/components/profile/footer-icon/GmailFoot";
 import TwitterFoot from "@/components/profile/footer-icon/TwitterFoot";
 import GithubFoot from "@/components/profile/footer-icon/GithubFoot";
 import WechatFoot from "@/components/profile/footer-icon/WechatFoot";
+import { toast } from "sonner";
 
 export default function Footer() {
 
@@ -9,9 +10,11 @@ export default function Footer() {
         if (item.title === "Gmail") {
           // 邮箱复制到剪贴板
           navigator.clipboard.writeText(item.href);
+          toast.success("gmail has copied to clipboard");
         } else if (item.title === "WeChat") {
           // 微信复制到剪贴板
           navigator.clipboard.writeText(item.href);
+          toast.success("wechat has copied to clipboard");
         } else {
           window.open(item.href, "_blank");
         }
