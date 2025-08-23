@@ -56,7 +56,7 @@ export default function SkillsList() {
         >
             <div className="m-auto flex flex-col gap-5 items-center bg-white/10 backdrop-blur-[4px] rounded-lg p-2 text-white">
                 <p className="text-2xl font-bold">Skills</p>
-                <motion.div className="flex flex-wrap items-center justify-center gap-10 font-normal text-lg text-white/80 max-w-xl">
+                <motion.div className="flex flex-wrap items-center justify-center gap-10 font-normal text-lg text-white/90 max-w-xl">
                     {skills.map((skill) => (
                         <motion.div key={skill.name} className="flex flex-col items-center gap-2"
                             variants={child}

@@ -11,7 +11,7 @@ import {
 } from '@/components/motion-primitives/morphing-dialog';
 import { PlusIcon } from 'lucide-react';
 
-export function MorphingDialogBasic() {
+export function MorphingDialogBasic({ title, subtitle, image, link }: { title: string, subtitle: string, image: string, link: string }) {
     return (
         <MorphingDialog
             transition={{
@@ -27,17 +27,17 @@ export function MorphingDialogBasic() {
                 className='flex max-w-[330px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900'
             >
                 <MorphingDialogImage
-                    src='/EXAMPLE.jpg'
+                    src={image}
                     alt='A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood.'
                     className='h-48 w-full object-cover'
                 />
                 <div className='flex grow flex-row items-end justify-between px-3 py-2'>
                     <div>
                         <MorphingDialogTitle className='text-zinc-950 dark:text-zinc-50'>
-                            PEN-PATH
+                            {title}
                         </MorphingDialogTitle>
                         <MorphingDialogSubtitle className='text-zinc-700 dark:text-zinc-400'>
-                            A social platform that allows daily sharing of diary.
+                            {subtitle}
                         </MorphingDialogSubtitle>
                     </div>
                     <span
@@ -57,16 +57,16 @@ export function MorphingDialogBasic() {
                     className='pointer-events-auto relative flex h-auto w-full flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900 sm:w-[500px]'
                 >
                     <MorphingDialogImage
-                        src='/EXAMPLE.jpg'
+                        src={image}
                         alt='A desk lamp designed by Edouard Wilfrid Buquet in 1925. It features a double-arm design and is made from nickel-plated brass, aluminium and varnished wood.'
                         className='h-full w-full'
                     />
                     <div className='p-6'>
                         <MorphingDialogTitle className='text-2xl text-zinc-950 dark:text-zinc-50'>
-                            PEN-PATH
+                            {title}
                         </MorphingDialogTitle>
                         <MorphingDialogSubtitle className='text-zinc-700 dark:text-zinc-400'>
-                            A social platform that allows daily sharing of diary.
+                            {subtitle}
                         </MorphingDialogSubtitle>
                         <MorphingDialogDescription
                             disableLayoutAnimation
@@ -84,11 +84,11 @@ export function MorphingDialogBasic() {
                             </p>
                             <a
                                 className='mt-2 inline-flex text-zinc-500 underline'
-                                href='http://penpath.coder-zh.top/'
+                                href={link}
                                 target='_blank'
                                 rel='noopener noreferrer'
                             >
-                                PEN-PATH
+                                {title}
                             </a>
                         </MorphingDialogDescription>
                     </div>

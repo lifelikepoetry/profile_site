@@ -34,7 +34,10 @@ export default function Project() {
                 <p className="text-2xl font-bold">Projects</p>
                 <div className="flex flex-wrap justify-center gap-4 max-w-4xl">
                     <motion.div variants={child}>
-                        <MorphingDialogBasic />
+                        <MorphingDialogBasic title="PEN-PATH" subtitle="A social platform that allows daily sharing of diary." image="/EXAMPLE.jpg" link="http://penpath.coder-zh.top/" />
+                    </motion.div>
+                    <motion.div variants={child}>
+                        <MorphingDialogBasic title="PEN-PATH" subtitle="A social platform that allows daily sharing of diary." image="/EXAMPLE.jpg" link="http://penpath.coder-zh.top/" />
                     </motion.div>
                 </div>
             </div>
