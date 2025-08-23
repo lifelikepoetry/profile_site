@@ -40,7 +40,7 @@ export default function Project() {
         >
             <div className="m-auto flex flex-col gap-4 items-center text-white">
                 <p className={`${oleo_script.className} text-5xl font-bold`}>Projects</p>
-                <div className="flex flex-wrap justify-center gap-4 mt-10 bg-white/10 backdrop-blur-[4px] rounded-lg p-10 ">
+                <div className="flex flex-wrap justify-center gap-4 mt-10">
                     <motion.div variants={child}>
                         <TiltCard rotationFactor={3} scale={1.02} y={-5}>
                             <div className="w-[952px] h-[330px] py-[50px] px-[32px]" style={{

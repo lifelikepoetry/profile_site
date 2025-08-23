@@ -21,13 +21,13 @@ export default function Footer() {
       };
 
     return (
-        <div className="flex gap-4 items-center justify-between border-t-1 border-white/20 pt-4 pb-6 w-full z-10">
+        <div className="flex gap-4 items-center justify-between border-t-1 border-white/20 pt-4 pb-6 px-6 w-full z-10">
             <span className="text-white/80 text-m">&copy; 2025 Coder Zhang. All rights reserved</span>
             <div className="gap-4 text-white/80 cursor-pointer hidden sm:flex">
-                <div onClick={() => handleClick({title: "Gmail", href: "a1522077114@gmail.com"})}><GmailFoot width={24} height={24} /></div>
-                <div onClick={() => handleClick({title: "Twitter", href: "https://x.com/zh_coder"})}><TwitterFoot width={24} height={24} /></div>
-                <div onClick={() => handleClick({title: "Github", href: "https://github.com/lifelikepoetry"})}><GithubFoot width={24} height={24} /></div>
-                <div onClick={() => handleClick({title: "WeChat", href: "_LonganZ"})}><WechatFoot width={24} height={24} /></div>
+                <div className="hover:scale-130 hover:text-white transition-all duration-300" onClick={() => handleClick({title: "Gmail", href: "a1522077114@gmail.com"})}><GmailFoot width={24} height={24}/></div>
+                <div className="hover:scale-130 hover:text-white transition-all duration-300" onClick={() => handleClick({title: "Twitter", href: "https://x.com/zh_coder"})}><TwitterFoot width={24} height={24} /></div>
+                <div className="hover:scale-130 hover:text-white transition-all duration-300" onClick={() => handleClick({title: "Github", href: "https://github.com/lifelikepoetry"})}><GithubFoot width={24} height={24} /></div>
+                <div className="hover:scale-130 hover:text-white transition-all duration-300" onClick={() => handleClick({title: "WeChat", href: "_LonganZ"})}><WechatFoot width={24} height={24} /></div>
             </div>
         </div>
     )
