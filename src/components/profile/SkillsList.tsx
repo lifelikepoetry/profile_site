@@ -54,7 +54,7 @@ export default function SkillsList() {
             variants={variants}
             viewport={{ once: false, amount: 0.3 }}
         >
-            <div className="m-auto flex flex-col gap-5 items-center">
+            <div className="m-auto flex flex-col gap-5 items-center bg-white/10 backdrop-blur-[4px] rounded-lg p-2">
                 <p className="text-2xl font-bold">Skills</p>
                 <motion.div className="flex flex-wrap items-center justify-center gap-10 font-normal text-lg text-gray-600 max-w-xl">
                     {skills.map((skill) => (

@@ -6,6 +6,7 @@ import Project from "@/components/profile/Project";
 import Navbar from "@/components/profile/Navbar";
 import General from "@/components/profile/General";
 import Footer from "@/components/profile/Footer";
+import VantaFog from "@/components/profile/VantaFog";
 
 
 
@@ -15,6 +16,8 @@ export default function Home() {
     return (
         <>
             <Navbar />
+
+            {/* <img src="/dali.jpg" alt="" className="w-full h-full object-cover fixed top-0 left-0 z-0"/> */}
 
             <div className={`flex flex-col items-center`}>
                 <General />

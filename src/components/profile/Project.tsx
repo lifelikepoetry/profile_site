@@ -30,7 +30,7 @@ export default function Project() {
             viewport={{ once: false, amount: 0.3 }}
             variants={variants}
         >
-            <div className="m-auto flex flex-col gap-4 items-center">
+            <div className="m-auto flex flex-col gap-4 items-center bg-white/10 backdrop-blur-[4px] rounded-lg p-10">
                 <p className="text-2xl font-bold">Projects</p>
                 <div className="flex flex-wrap justify-center gap-4 max-w-4xl">
                     <motion.div variants={child}>
