@@ -25,10 +25,10 @@ export default function General() {
     const text4 = ['Just', 'an', 'indie', 'Full-stack', 'developer', 'who', 'loves', 'to', 'build', 'something.'];
 
     return (
+
         <div id="home" className="h-screen w-full flex">
 
             <div className="m-auto flex flex-col items-center justify-center gap-10 bg-white/10 backdrop-blur-[4px] rounded-lg p-10 text-white">
-
                 <motion.div
                     className="text-2xl font-bold flex flex-wrap"
                     variants={container}

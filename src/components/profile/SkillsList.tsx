@@ -9,6 +9,12 @@ import TwitterFoot from "@/components/profile/footer-icon/TwitterFoot";
 import GithubFoot from "@/components/profile/footer-icon/GithubFoot";
 import WechatFoot from "@/components/profile/footer-icon/WechatFoot";
 import { div } from "motion/react-client";
+import {Oleo_Script } from "next/font/google";
+
+const oleo_script = Oleo_Script({
+    subsets: ['latin'],
+    weight: ['400'],
+})
 
 const skills = [
     { name: "React", icon: Reactjs },
@@ -54,13 +60,13 @@ export default function SkillsList() {
             variants={variants}
             viewport={{ once: false, amount: 0.3 }}
         >
-            <div className="m-auto flex flex-col gap-5 items-center bg-white/10 backdrop-blur-[4px] rounded-lg p-2 text-white">
-                <p className="text-2xl font-bold">Skills</p>
-                <motion.div className="flex flex-wrap items-center justify-center gap-10 font-normal text-lg text-white/90 max-w-xl">
+            <div className="m-auto flex flex-col gap-5 items-center bg-white/10 backdrop-blur-[4px] rounded-lg p-5 text-white">
+                <p className={`${oleo_script.className} text-5xl font-bold`}>Skills</p>
+                <motion.div className="flex flex-wrap items-center justify-center gap-10 font-normal text-lg text-white/80 max-w-xl mt-10">
                     {skills.map((skill) => (
                         <motion.div key={skill.name} className="flex flex-col items-center gap-2"
                             variants={child}
-                            whileHover={{ scale: 1.3, y: -10, color: 'black', transition: { duration: 0.2 } }}
+                            whileHover={{ scale: 1.3, y: -10, color: 'white', transition: { duration: 0.2 } }}
                         >
                             <skill.icon width={64} height={64} />
                             <span className="w-[97px] text-center">{skill.name}</span>

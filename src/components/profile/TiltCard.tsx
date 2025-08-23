@@ -1,25 +1,21 @@
 import { Tilt } from '@/components/motion-primitives/tilt';
 import { motion } from 'motion/react';
 
-export function TiltCard() {
+export function TiltCard({ children, borderRadius="12px", rotationFactor=13, scale=1.1, y=-10 }: { children: React.ReactNode, borderRadius?: string, rotationFactor?: number, scale?: number, y?: number }) {
   return (
-    <Tilt rotationFactor={13} isRevese>
+    <Tilt rotationFactor={rotationFactor} isRevese>
       <motion.div
         style={{
-          borderRadius: '12px',
+          borderRadius: borderRadius,
         }}
-        className='flex max-w-[270px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900'
+        className='overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900'
         whileHover={{
-          scale: 1.1,
-          y: -10,
+          scale: scale,
+          y: y,
           transition: { duration: 0.2 }
         }}
       >
-        <img
-          src='/coder-zh.jpg'
-          alt='coder-zh.jpg'
-          className='h-full w-full object-cover'
-        />
+        {children}
       </motion.div>
     </Tilt>
   );

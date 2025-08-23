@@ -1,9 +1,14 @@
 "use client"
-import { Neonderthaw } from "next/font/google";
+import { Neonderthaw, Oleo_Script } from "next/font/google";
 import * as motion from "motion/react-client";
 // import LiquidGlass from 'liquid-glass-react'
 
 const neonderthaw = Neonderthaw({
+  weight: ['400'],
+  subsets: ['latin'],
+})
+
+const oleo_script = Oleo_Script({
   weight: ['400'],
   subsets: ['latin'],
 })
@@ -17,7 +22,7 @@ export default function Navbar() {
       viewport={{ once: false, amount: 0.3 }}
     >
       <div className={`${neonderthaw.className} text-3xl font-bold`}>Coder Zhang</div>
-      <div className="gap-5 font-bold hidden md:flex">
+      <div className={`${oleo_script.className} gap-5 text-xl font-bold hidden md:flex`}>
         <a href="#home">Home</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>

@@ -1,6 +1,14 @@
 "use client"
 import { MorphingDialogBasic } from "./MorphingDialogBasic";
 import { motion, Variants } from "motion/react";
+import { Oleo_Script } from "next/font/google";
+import { TiltCard } from "./TiltCard";
+
+const oleo_script = Oleo_Script({
+    subsets: ['latin'],
+    weight: ['400'],
+})
+
 
 const variants = {
     hidden: { opacity: 0, y: 30, filter: "blur(10px)" },
@@ -30,14 +38,37 @@ export default function Project() {
             viewport={{ once: false, amount: 0.3 }}
             variants={variants}
         >
-            <div className="m-auto flex flex-col gap-4 items-center bg-white/10 backdrop-blur-[4px] rounded-lg p-10 text-white">
-                <p className="text-2xl font-bold">Projects</p>
-                <div className="flex flex-wrap justify-center gap-4 max-w-4xl">
+            <div className="m-auto flex flex-col gap-4 items-center text-white">
+                <p className={`${oleo_script.className} text-5xl font-bold`}>Projects</p>
+                <div className="flex flex-wrap justify-center gap-4 max-w-4xl mt-10 bg-white/10 backdrop-blur-[4px] rounded-lg p-10 ">
                     <motion.div variants={child}>
-                        <MorphingDialogBasic title="PEN-PATH" subtitle="A social platform that allows daily sharing of diary." image="/EXAMPLE.jpg" link="http://penpath.coder-zh.top/" />
-                    </motion.div>
-                    <motion.div variants={child}>
-                        <MorphingDialogBasic title="PEN-PATH" subtitle="A social platform that allows daily sharing of diary." image="/EXAMPLE.jpg" link="http://penpath.coder-zh.top/" />
+                        <TiltCard rotationFactor={3} scale={1.02} y={-5}>
+                            <div className="w-[952px] h-[330px] py-[50px] px-[32px]" style={{
+                                backgroundImage: "url('/penpath-img.png')",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                backgroundRepeat: "no-repeat",
+                            }}>
+                                <div className="flex flex-col gap-6">
+                                    <img src="/penpath-icon.png" alt="penpath-icon" className="w-[154px] h-[36px] object-cover" />
+                                    <span className="flex flex-col gap-6 text-[#4E475E]">
+                                        <p className="text-[16px] leading-[24px]">
+                                            PEN-PATH
+                                        </p>
+                                        <p className=" text-[24px] leading-[24px] font-bold">
+                                            一款日记分享的社交平台
+                                        </p>
+                                        <p className="text-[16px] leading-[24px]">
+                                            一款日记分享的社交平台，用户可以分享自己的日记，并查看其他用户的日记。
+                                        </p>
+                                    </span>
+                                    <button className="w-[98px] h-[36px] py-2 px-4 bg-[#7C3AED] text-white rounded-[6px] flex items-center justify-center cursor-pointer"
+                                        onClick={() => {
+                                            window.open("http://penpath.coder-zh.top/", "_blank");
+                                        }}>立即查看</button>
+                                </div>
+                            </div>
+                        </TiltCard>
                     </motion.div>
                 </div>
             </div>
