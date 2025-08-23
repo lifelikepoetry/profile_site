@@ -40,7 +40,7 @@ export default function Project() {
         >
             <div className="m-auto flex flex-col gap-4 items-center text-white">
                 <p className={`${oleo_script.className} text-5xl font-bold`}>Projects</p>
-                <div className="flex flex-wrap justify-center gap-4 max-w-4xl mt-10 bg-white/10 backdrop-blur-[4px] rounded-lg p-10 ">
+                <div className="flex flex-wrap justify-center gap-4 mt-10 bg-white/10 backdrop-blur-[4px] rounded-lg p-10 ">
                     <motion.div variants={child}>
                         <TiltCard rotationFactor={3} scale={1.02} y={-5}>
                             <div className="w-[952px] h-[330px] py-[50px] px-[32px]" style={{
@@ -56,10 +56,10 @@ export default function Project() {
                                             PEN-PATH
                                         </p>
                                         <p className=" text-[24px] leading-[24px] font-bold">
-                                            一款日记分享的社交平台
+                                            一款日记分享社交平台
                                         </p>
                                         <p className="text-[16px] leading-[24px]">
-                                            一款日记分享的社交平台，用户可以分享自己的日记，并查看其他用户的日记。
+                                            鼓励用户分享每日心情，每日一记，记录生活点滴。
                                         </p>
                                     </span>
                                     <button className="w-[98px] h-[36px] py-2 px-4 bg-[#7C3AED] text-white rounded-[6px] flex items-center justify-center cursor-pointer"
