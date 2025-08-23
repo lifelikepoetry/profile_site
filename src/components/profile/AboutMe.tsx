@@ -17,9 +17,9 @@ export default function AboutMe() {
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: false, amount: 0.3 }}
         >
-            <div className="m-auto flex flex-col gap-4 items-center py-15 text-white">
+            <div className="m-auto flex flex-col gap-4 items-center py-15 text-white w-[849px]">
                 <p className={`${oleo_script.className} text-5xl font-bold text-center`}>About me</p>
-                <div className="flex gap-4 items-center justify-between max-w-5xl bg-white/10 backdrop-blur-[4px] rounded-lg p-2">
+                <div className="flex gap-4 items-center justify-between w-full bg-white/10 backdrop-blur-[4px] rounded-lg p-2">
                     <motion.span className="text-white/80 text-lg flex flex-col gap-7 w-full sm:w-3/4 text-center"
                         initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}

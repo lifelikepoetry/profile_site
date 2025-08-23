@@ -61,7 +61,7 @@ export default function Navbar() {
 
   return (
     <motion.div
-      className={`h-16 w-full flex justify-between items-center px-5 py-3 fixed top-0 z-50 bg-white/20 backdrop-blur-sm text-white`}
+      className={`h-16 w-full flex justify-center md:justify-between items-center px-5 py-3 fixed top-0 z-50 bg-white/20 backdrop-blur-sm text-white`}
       initial={{ opacity: 0, y: -64, filter: "blur(10px)" }}
       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{ duration: 0.5 }}

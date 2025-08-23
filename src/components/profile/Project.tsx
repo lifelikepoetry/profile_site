@@ -43,10 +43,10 @@ export default function Project() {
                 <div className="flex flex-wrap justify-center gap-4 mt-10">
                     <motion.div variants={child}>
                         <TiltCard rotationFactor={3} scale={1.02} y={-5}>
-                            <div className="w-[952px] h-[330px] py-[50px] px-[32px]" style={{
+                            <div className="w-full md:w-[849px]  py-[50px] px-[32px] md:bg-center" style={{
                                 backgroundImage: "url('/penpath-img.png')",
                                 backgroundSize: "cover",
-                                backgroundPosition: "center",
+                                backgroundPosition: "left",
                                 backgroundRepeat: "no-repeat",
                             }}>
                                 <div className="flex flex-col gap-6">

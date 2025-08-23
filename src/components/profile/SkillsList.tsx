@@ -60,9 +60,9 @@ export default function SkillsList() {
             variants={variants}
             viewport={{ once: false, amount: 0.3 }}
         >
-            <div className="m-auto flex flex-col gap-5 items-center bg-white/10 backdrop-blur-[4px] rounded-lg p-5 text-white">
+            <div className="m-auto flex flex-col gap-5 items-center text-white w-[849px]">
                 <p className={`${oleo_script.className} text-5xl font-bold`}>Skills</p>
-                <motion.div className="flex flex-wrap items-center justify-center gap-10 font-normal text-lg text-white/80 max-w-xl mt-10">
+                <motion.div className="flex flex-wrap items-center justify-center gap-10 font-normal text-lg text-white/80 w-full mt-10 bg-white/10 backdrop-blur-[4px] rounded-lg p-5">
                     {skills.map((skill) => (
                         <motion.div key={skill.name} className="flex flex-col items-center gap-2"
                             variants={child}

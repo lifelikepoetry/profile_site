@@ -27,8 +27,8 @@ export default function General() {
     return (
 
         <div id="home" className="h-screen w-full flex">
-
-            <div className="m-auto flex flex-col items-center justify-center gap-10 bg-white/10 backdrop-blur-[4px] rounded-lg p-10 text-white">
+       
+            <div className="m-auto flex flex-col items-center justify-center gap-10 bg-white/10 backdrop-blur-[4px] rounded-lg p-2  text-white md:w-[849px] md:p-10">
                 <motion.div
                     className="text-2xl font-bold flex flex-wrap"
                     variants={container}
