@@ -27,7 +27,7 @@ export default function General() {
     return (
         <div id="home" className="h-screen w-full flex">
 
-            <div className="m-auto flex flex-col items-center justify-center gap-10 bg-white/10 backdrop-blur-[4px] rounded-lg p-10">
+            <div className="m-auto flex flex-col items-center justify-center gap-10 bg-white/10 backdrop-blur-[4px] rounded-lg p-10 text-white">
 
                 <motion.div
                     className="text-2xl font-bold flex flex-wrap"
@@ -87,6 +87,7 @@ export default function General() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: false, amount: 0.5 }}
+                        className="text-white/80"
                     >
                         {text3.split("").map((char, index) => (
                             <motion.span key={index} variants={child}>
@@ -100,6 +101,7 @@ export default function General() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: false, amount: 0.5 }}
+                        className="text-white/80"
                     >
                         {text4.map((word, index) => (
                             <motion.span key={index} variants={child}>

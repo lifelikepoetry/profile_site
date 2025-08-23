@@ -17,9 +17,9 @@ export default function Home() {
         <>
             <Navbar />
 
-            {/* <img src="/dali.jpg" alt="" className="w-full h-full object-cover fixed top-0 left-0 z-0"/> */}
+            <img src="/dali.jpg" alt="" className="w-full h-full object-cover fixed top-0 left-0 -z-10 pointer-events-none"/>
 
-            <div className={`flex flex-col items-center`}>
+            <div className={`flex flex-col items-center relative z-10`}>
                 <General />
 
                 <Project />
