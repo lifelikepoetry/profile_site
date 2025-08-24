@@ -3,6 +3,7 @@ import { Neonderthaw, Oleo_Script } from "next/font/google";
 import * as motion from "motion/react-client";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import { useTranslations } from 'next-intl';
 
 const neonderthaw = Neonderthaw({
   weight: ["400"],
@@ -15,6 +16,7 @@ const oleo_script = Oleo_Script({
 });
 
 export default function Navbar() {
+  const t = useTranslations('navbar');
   const [position, setPosition] = useState({ bottom: -8, left: 4 });
   const [activeSection, setActiveSection] = useState("home");
 
@@ -72,10 +74,10 @@ export default function Navbar() {
       <div
         className={`${oleo_script.className} relative gap-5 text-xl font-bold hidden md:flex`}
       >
-        <a href="#home" className={cn("text-white/80", activeSection === "home" && "text-white")}>Home</a>
-        <a href="#projects" className={cn("text-white/80", activeSection === "projects" && "text-white")}>Projects</a>
-        <a href="#about" className={cn("text-white/80", activeSection === "about" && "text-white")}>About</a>
-        <a href="#skills" className={cn("text-white/80", activeSection === "skills" && "text-white")}>Skills</a>
+        <a href="#home" className={cn("text-white/80", activeSection === "home" && "text-white")}>{t('home')}</a>
+        <a href="#projects" className={cn("text-white/80", activeSection === "projects" && "text-white")}>{t('projects')}</a>
+        <a href="#about" className={cn("text-white/80", activeSection === "about" && "text-white")}>{t('about')}</a>
+        <a href="#skills" className={cn("text-white/80", activeSection === "skills" && "text-white")}>{t('skills')}</a>
         <div
           className={cn(
             "w-[30px] h-[6px] rounded-[30px] bg-white absolute -bottom-2 left-1 transition-all duration-300"

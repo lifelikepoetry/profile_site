@@ -1,5 +1,22 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## 🌐 国际化支持 (Internationalization)
+
+This project supports both Chinese (中文) and English languages using `next-intl`.
+
+### 支持的语言 (Supported Languages)
+- 🇨🇳 中文 (Chinese) - Default
+- 🇺🇸 English
+
+### 访问不同语言版本 (Access Different Language Versions)
+- 中文版本: [http://localhost:3000/zh](http://localhost:3000/zh)
+- English Version: [http://localhost:3000/en](http://localhost:3000/en)
+- 根路径会自动重定向到中文版本 (Root path redirects to Chinese version)
+
+### 语言切换 (Language Switching)
+页面右上角有语言切换按钮，可以在中英文之间切换。
+(Language switcher is available in the top-right corner of the page)
+
 ## Getting Started
 
 First, run the development server:
@@ -16,7 +33,7 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The app will automatically redirect to the Chinese version ([http://localhost:3000/zh](http://localhost:3000/zh)).
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 

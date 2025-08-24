@@ -4,6 +4,7 @@ import { motion, Variants } from "motion/react";
 import { Oleo_Script } from "next/font/google";
 import { TiltCard } from "./TiltCard";
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 const oleo_script = Oleo_Script({
     subsets: ['latin'],
@@ -32,6 +33,7 @@ const child: Variants = {
 
 
 export default function Project() {
+    const t = useTranslations('projects');
     return (
         <motion.div id="projects" className="h-screen w-full flex py-15"
             initial="hidden"
@@ -40,7 +42,7 @@ export default function Project() {
             variants={variants}
         >
             <div className="m-auto flex flex-col gap-4 items-center text-white">
-                <p className={`${oleo_script.className} text-5xl font-bold`}>Projects</p>
+                <p className={`${oleo_script.className} text-5xl font-bold`}>{t('title')}</p>
                 <div className="flex flex-wrap justify-center gap-4 mt-10">
                     <motion.div variants={child}>
                         <TiltCard rotationFactor={3} scale={1.02} y={-5}>
@@ -54,19 +56,19 @@ export default function Project() {
                                     <Image src="/penpath-icon.png" width={154} height={36} alt="penpath-icon" className="object-cover" />
                                     <span className="flex flex-col gap-6 text-[#4E475E]">
                                         <p className="text-[16px] leading-[24px]">
-                                            PEN-PATH
+                                            {t('penpath.name')}
                                         </p>
                                         <p className=" text-[24px] leading-[24px] font-bold">
-                                            一款日记分享社交平台
+                                            {t('penpath.description')}
                                         </p>
                                         <p className="text-[16px] leading-[24px]">
-                                            鼓励用户分享每日心情，每日一记，记录生活点滴。
+                                            {t('penpath.detail')}
                                         </p>
                                     </span>
                                     <button className="w-[98px] h-[36px] py-2 px-4 bg-[#7C3AED] text-white rounded-[6px] flex items-center justify-center cursor-pointer"
                                         onClick={() => {
                                             window.open("http://penpath.coder-zh.top/", "_blank");
-                                        }}>立即查看</button>
+                                        }}>{t('penpath.viewButton')}</button>
                                 </div>
                             </div>
                         </TiltCard>

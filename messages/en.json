@@ -1,0 +1,40 @@
+{
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "skills": "Skills"
+  },
+  "general": {
+    "greeting": "Hi, I'm Coder Zhang!",
+    "title": "A Full Stack Engineer",
+    "welcome": "Welcome to my personal page!",
+    "description": "Just an indie Full-stack developer who loves to build something."
+  },
+  "about": {
+    "title": "About me",
+    "intro": "👋 Hi, I'm Longan Zhang, a full-stack developer with 4 years of experience, currently based in 🇨🇳 Yunnan, China.",
+    "skills": "💻 I specialize in building modern frontend apps with React, Next.js, TypeScript, and Tailwind CSS, and robust backends using Node.js, Nest.js, Java, Spring Boot, and Spring Cloud. I'm also experienced with Postgres, MySQL and Redis.",
+    "passion": "🚀 I love turning ideas into real products, focusing on performance, scalability, and clean architecture. Always learning, always building.",
+    "contact": "💬 If you like my projects, feel free to contact me, and let's learn together."
+  },
+  "projects": {
+    "title": "Projects",
+    "penpath": {
+      "name": "PEN-PATH",
+      "description": "A diary sharing social platform",
+      "detail": "Encourage users to share daily moods, daily notes, and record life moments.",
+      "viewButton": "View"
+    }
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "footer": {
+    "copyright": "© 2024 Coder Zhang. All rights reserved."
+  },
+  "msg": {
+    "gmail-copy": "Gmail has copied to clipboard",
+    "wechat-copy": "WeChat has copied to clipboard"
+  }
+}

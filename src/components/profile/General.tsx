@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react"
 import Contact from "@/components/profile/Contact";
+import { useTranslations } from 'next-intl';
 
 const container = {
     hidden: {},
@@ -18,11 +19,12 @@ const child = {
 };
 
 export default function General() {
+    const t = useTranslations('general');
 
-    const text = "Hi, I'm Coder Zhang! ";
-    const text2 = "A Full Stack Engineer";
-    const text3 = "Welcome to my personal page!";
-    const text4 = ['Just', 'an', 'indie', 'Full-stack', 'developer', 'who', 'loves', 'to', 'build', 'something.'];
+    const text = t('greeting') + " ";
+    const text2 = t('title');
+    const text3 = t('welcome');
+    const text4 = t('description').split(' ');
 
     return (
 

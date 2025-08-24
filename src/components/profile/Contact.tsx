@@ -3,6 +3,7 @@
 import { motion, Variants, TargetAndTransition } from "motion/react";
 import { Gmail, Twitter, Github, WeChat } from "@/components/profile/contact-icon";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 
 const container = {
   hidden: {},
@@ -59,15 +60,16 @@ const contactInfo: ContactItem[] = [
 ]
 
 export default function Contact() {
+  const t = useTranslations("msg");
   const handleClick = (item: ContactItem) => {
     if (item.title === "Gmail") {
       // 邮箱复制到剪贴板
       navigator.clipboard.writeText(item.href);
-      toast.success("gmail has copied to clipboard");
+      toast.success(t("gmail-copy"));
     } else if (item.title === "WeChat") {
       // 微信复制到剪贴板
       navigator.clipboard.writeText(item.href);
-      toast.success("wechat has copied to clipboard");
+      toast.success(t("wechat-copy"));
     } else {
       window.open(item.href, "_blank");
     }

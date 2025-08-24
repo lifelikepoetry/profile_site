@@ -5,6 +5,7 @@ import {
 import React from 'react';
 import { motion, Variants } from "motion/react";
 import {Oleo_Script } from "next/font/google";
+import { useTranslations } from 'next-intl';
 
 const oleo_script = Oleo_Script({
     subsets: ['latin'],
@@ -46,6 +47,7 @@ const child: Variants = {
 
 
 export default function SkillsList() {
+    const t = useTranslations('skills');
 
     return (
 
@@ -56,7 +58,7 @@ export default function SkillsList() {
             viewport={{ once: false, amount: 0.3 }}
         >
             <div className="m-auto flex flex-col gap-5 items-center text-white w-[849px]">
-                <p className={`${oleo_script.className} text-5xl font-bold`}>Skills</p>
+                <p className={`${oleo_script.className} text-5xl font-bold`}>{t('title')}</p>
                 <motion.div className="flex flex-wrap items-center justify-center gap-10 font-normal text-lg text-white/80 w-full mt-10 bg-white/10 backdrop-blur-[4px] rounded-lg p-5">
                     {skills.map((skill) => (
                         <motion.div key={skill.name} className="flex flex-col items-center gap-2"

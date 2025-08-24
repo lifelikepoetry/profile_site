@@ -6,6 +6,7 @@ import Project from "@/components/profile/Project";
 import Navbar from "@/components/profile/Navbar";
 import General from "@/components/profile/General";
 import Footer from "@/components/profile/Footer";
+import LanguageSwitcher from "@/components/profile/LanguageSwitcher";
 import Image from "next/image";
 
 
@@ -16,6 +17,7 @@ export default function Home() {
     return (
         <>
             <Navbar />
+            <LanguageSwitcher />
 
             <Image src="/dali.jpg" fill alt="" className="w-full h-full object-cover fixed top-0 left-0 -z-10 pointer-events-none" />
 
