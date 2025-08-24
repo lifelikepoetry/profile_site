@@ -1,6 +1,7 @@
 import { TiltCard } from "./TiltCard";
 import { motion } from "motion/react";
 import {Oleo_Script } from "next/font/google";
+import Image from "next/image";
 
 const oleo_script = Oleo_Script({
     subsets: ['latin'],
@@ -38,10 +39,12 @@ export default function AboutMe() {
                         viewport={{ once: false, amount: 0.3 }}
                     >
                         <TiltCard>
-                            <img
+                            <Image
                                 src='/coder-zh.jpg'
                                 alt='coder-zh.jpg'
-                                className='h-[356px] w-[267px] object-cover'
+                                width={267}
+                                height={356}
+                                className='object-cover'
                             />
                         </TiltCard>
                     </motion.div>

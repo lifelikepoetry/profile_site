@@ -4,11 +4,6 @@ import {
 } from "@/components/profile/skills-icon";
 import React from 'react';
 import { motion, Variants } from "motion/react";
-import GmailFoot from "@/components/profile/footer-icon/GmailFoot";
-import TwitterFoot from "@/components/profile/footer-icon/TwitterFoot";
-import GithubFoot from "@/components/profile/footer-icon/GithubFoot";
-import WechatFoot from "@/components/profile/footer-icon/WechatFoot";
-import { div } from "motion/react-client";
 import {Oleo_Script } from "next/font/google";
 
 const oleo_script = Oleo_Script({

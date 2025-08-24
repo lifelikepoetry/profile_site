@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Rubik, Oleo_Script } from "next/font/google";
+import { Rubik } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {

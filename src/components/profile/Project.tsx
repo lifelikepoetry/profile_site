@@ -1,8 +1,9 @@
 "use client"
-import { MorphingDialogBasic } from "./MorphingDialogBasic";
+
 import { motion, Variants } from "motion/react";
 import { Oleo_Script } from "next/font/google";
 import { TiltCard } from "./TiltCard";
+import Image from "next/image";
 
 const oleo_script = Oleo_Script({
     subsets: ['latin'],
@@ -50,7 +51,7 @@ export default function Project() {
                                 backgroundRepeat: "no-repeat",
                             }}>
                                 <div className="flex flex-col gap-6">
-                                    <img src="/penpath-icon.png" alt="penpath-icon" className="w-[154px] h-[36px] object-cover" />
+                                    <Image src="/penpath-icon.png" width={154} height={36} alt="penpath-icon" className="object-cover" />
                                     <span className="flex flex-col gap-6 text-[#4E475E]">
                                         <p className="text-[16px] leading-[24px]">
                                             PEN-PATH

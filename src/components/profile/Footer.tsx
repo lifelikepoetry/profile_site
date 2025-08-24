@@ -4,9 +4,14 @@ import GithubFoot from "@/components/profile/footer-icon/GithubFoot";
 import WechatFoot from "@/components/profile/footer-icon/WechatFoot";
 import { toast } from "sonner";
 
+interface FooterItem {
+    title: string;
+    href: string;
+}
+
 export default function Footer() {
 
-    const handleClick = (item: any) => {
+    const handleClick = (item: FooterItem) => {
         if (item.title === "Gmail") {
           // 邮箱复制到剪贴板
           navigator.clipboard.writeText(item.href);

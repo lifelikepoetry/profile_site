@@ -29,12 +29,11 @@ export default function Navbar() {
 
       const observer = new IntersectionObserver(
         (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveSection(id);
-              console.log(`${id} is in view`);
-            }
-          });
+                   entries.forEach((entry) => {
+           if (entry.isIntersecting) {
+             setActiveSection(id);
+           }
+         });
         },
         { threshold: 0.5 } // 50% 可见时触发
       );

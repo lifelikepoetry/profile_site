@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, Variants } from "motion/react";
+import { motion, Variants, TargetAndTransition } from "motion/react";
 import { Gmail, Twitter, Github, WeChat } from "@/components/profile/contact-icon";
 import { toast } from "sonner";
 
@@ -27,7 +27,13 @@ const child: Variants = {
   },
 };
 
-const contactInfo = [
+interface ContactItem {
+  icon: React.ComponentType<{ width: number; height: number; className: string; whileHoverOptions: TargetAndTransition }>;
+  href: string;
+  title?: string;
+}
+
+const contactInfo: ContactItem[] = [
   {
     icon: Gmail,
     href: "a1522077114@gmail.com",
@@ -53,7 +59,7 @@ const contactInfo = [
 ]
 
 export default function Contact() {
-  const handleClick = (item: any) => {
+  const handleClick = (item: ContactItem) => {
     if (item.title === "Gmail") {
       // 邮箱复制到剪贴板
       navigator.clipboard.writeText(item.href);

@@ -2,6 +2,25 @@
 
 import { useEffect, useRef } from 'react';
 
+// 扩展 Window 接口以包含 VANTA 相关属性
+declare global {
+  interface Window {
+    VANTA?: {
+      BIRDS: (options: {
+        el: HTMLElement | null;
+        mouseControls: boolean;
+        touchControls: boolean;
+        gyroControls: boolean;
+        minHeight: number;
+        minWidth: number;
+        scale: number;
+        scaleMobile: number;
+      }) => { destroy: () => void };
+    };
+    vantaEffect?: { destroy: () => void } | null;
+  }
+}
+
 export default function VantaFog() {
   const vantaRef = useRef(null);
 
@@ -13,8 +32,8 @@ export default function VantaFog() {
       const vantaScript = document.createElement('script');
       vantaScript.src = 'https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js';
       vantaScript.onload = () => {
-        if ((window as any).VANTA) {
-          (window as any).vantaEffect = (window as any).VANTA.BIRDS({
+        if (window.VANTA) {
+          window.vantaEffect = window.VANTA.BIRDS({
             el: vantaRef.current,
             mouseControls: true,
             touchControls: true,
@@ -32,9 +51,9 @@ export default function VantaFog() {
 
     // 卸载时销毁效果
     return () => {
-      if ((window as any).vantaEffect) {
-        (window as any).vantaEffect.destroy();
-        (window as any).vantaEffect = null;
+      if (window.vantaEffect) {
+        window.vantaEffect.destroy();
+        window.vantaEffect = null;
       }
     };
   }, []);
